@@ -146,15 +146,20 @@ window.onload = () => {
   const input = document.querySelector('.search-input');
   const submitButton = document.querySelector('.btn-submit');
   submitButton.addEventListener('click', async () => {
-    content.innerHTML = '';
-    // ambil data
-    const data = await fetchData();
-    // value input 
-    const value = input.value.trim().toLowerCase();
-    // jalankan fungsi searchData()
-    searchData(value, data);
-    // bersihkan value input
-    input.value = '';
+    try {
+     content.innerHTML = '';
+     // ambil data
+     const data = await fetchData();
+     // value input 
+     const value = input.value.trim().toLowerCase();
+     // jalankan fungsi searchData()
+     searchData(value, data);
+     // bersihkan value input
+     input.value = '';
+    } catch (error) {
+     // jika mengalami masalah saat mengambil data 
+     content.innerHTML = showError(error.message);
+    }
   });
   
   function searchData(value, param) {
