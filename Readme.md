@@ -34,4 +34,4 @@ git clone https://github.com/candradwicahyo/alquran-online.git
 
 ![preview](https://github.com/candradwicahyo/alquran-online/blob/master/image.jpg)
 
-[tekan link ini](https://candradwicahyo.github.io/alquran-online)
+[tekan link ini](https://candradwicahyo.github.io/alquran-online) untuk mencoba demo
